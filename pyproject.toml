@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sesn"
+version = "1.0.0"
+authors = [
+    { name = "Hendrik Sauer", email="hendrik-sauer@mailbox.org" },
+    { name = "Ivan Sosnovik" },
+    { name = "Michał Szmaja" }
+]
+description = "Code for \"Scale-Equivariant Steerable Networks\""
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "numpy",
+    "scipy",
+    "torch",
+    "torchvision",
+]
+
+[project.urls]
+Homepage = "https://github.com/the-sauer/sesn"
+
+[tool.setuptools.packages.find]
+where = ["src"]
