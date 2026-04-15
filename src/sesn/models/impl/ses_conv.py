@@ -205,4 +205,4 @@ class SESArgMaxProjection(nn.Module):
         self.scales = torch.tensor(scales).view(1, 1, -1, 1, 1)
 
     def forward(self, x):
-        torch.sum(torch.nn.functional.softmax(x, dim=3) * self.scales, dim=3)
+        return torch.sum(torch.nn.functional.softmax(x, dim=2) * self.scales, dim=2)
